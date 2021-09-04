@@ -6,12 +6,7 @@ import ContactFilter from './components/Filter/ContactFilter';
 import ContactList from './components/List/ContactList';
 export default class App extends Component {
   state = {
-    contacts: [
-      {id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},
-      {id: 'id-2', name: 'Hermione Kline', number: '443-89-12'},
-      {id: 'id-3', name: 'Eden Clements', number: '645-17-79'},
-      {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
-    ],
+    contacts: [],
     filter: '',
   };
 
@@ -25,9 +20,11 @@ export default class App extends Component {
           ],
         }));
   };
+
   handlerFindContact = e => {
     this.setState({filter: e.target.value});
   };
+
   handlerDelContact = e => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(
@@ -35,6 +32,7 @@ export default class App extends Component {
       ),
     }));
   };
+
   render() {
     return (
       <section className={s.container}>

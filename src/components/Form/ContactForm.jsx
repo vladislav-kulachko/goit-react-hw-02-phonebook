@@ -28,7 +28,7 @@ export default class ContactForm extends Component {
     return (
       <form
         className={s.form}
-        onClick={this.handlerSubmitFormClick}
+        onSubmit={this.handlerSubmitFormClick}
         onKeyPress={this.handlerSubmitFormEnter}
       >
         <label className={s.label}>
