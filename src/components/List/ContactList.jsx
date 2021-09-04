@@ -5,7 +5,7 @@ export default function ContactList({contacts, filter, handlerDelContact}) {
     <ul className={s.list}>
       {contacts.length === 0 ? (
         <li className={s.notify}>
-          Oops, this is empty... Please add your contacts!
+          Oops, it's empty... Please add your contacts!
         </li>
       ) : (
         contacts
